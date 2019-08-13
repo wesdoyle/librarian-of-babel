@@ -5,7 +5,7 @@ the [Library of Babel](https://libraryofbabel.info) project.
 
 ## Background
 
-The Library of [Babel (La biblioteca de Babel))](https://en.wikipedia.org/wiki/The_Library_of_Babel) is a short story by Jorge Luis Borges.
+The Library of [Babel (La biblioteca de Babel)](https://en.wikipedia.org/wiki/The_Library_of_Babel) is a short story by Jorge Luis Borges.
 In this story, the author writes about a library containing all possible 410-page books containing a finite, specific number of characters.
 
 A website called the [Library of Babel Project](https://libraryofbabel.info) contains an emulation of the concept of the Library of Babel.
