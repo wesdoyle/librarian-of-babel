@@ -7,7 +7,7 @@
             "matches": [
                 "<all_urls>"
             ],
-            "js": ["jquery-3.4.1.slim.min.js", "content.js"]
+            "js": ["jquery-3.4.1.slim.min.js", "content.js", "words_sm.js"]
         }
     ],
     "browser_action": {
