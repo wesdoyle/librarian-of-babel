@@ -1,0 +1,16 @@
+{
+    "manifest_version": 2,
+    "name": "Librarian of Babel",
+    "version": "0.1",
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": ["jquery-3.4.1.slim.min.js", "content.js"]
+        }
+    ],
+    "browser_action": {
+        "default_icon": "lib-hex.png"
+    }
+}
