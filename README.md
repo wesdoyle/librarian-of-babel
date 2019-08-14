@@ -15,6 +15,11 @@ This plugin simply highlights English words (from a relatively small vocabulary)
 This project was made simply for fun; the code has not been optimized.
 
 
+## Motivation
+
+The website itself provides some existing functionality to highlight English words on a page and "overlapping" words, however, its implmentation includes matches for all substrings on a page.  This extension takes an alternative approach, matching and highlighting only 'tokenized' words which are delimited on either side by whitespace.
+
+
 ## Highlight Plugin
 The jQuery highlight function in use is adapted from [Bartek Szokpka's work](https://bartaz.github.io/sandbox.js/jquery.highlight.html), which is adapted in turn from [Johann Burkhard's](https://johannburkard.de/) plugin.
 
