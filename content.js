@@ -1,7 +1,7 @@
 $("<style>")
     .prop("type", "text/css")
     .html("\
-    .librarian {\
+    .lib-highlight {\
                 background-color: #00ECAD;\
             }")
     .appendTo("head");
@@ -11,10 +11,9 @@ $.extend({
     highlight: function (node, re, nodeName, className) {
         if (node.nodeType === 3) {
             var match = node.data.match(re);
-            console.log('match', match);
             if (match) {
                 var highlight = document.createElement(nodeName || 'span');
-                highlight.className = className || 'librarian';
+                highlight.className = className || 'lib-highlight';
                 var wordNode = node.splitText(match.index + 1);
                 wordNode.splitText(match[0].replace(/\s+/g, '').length);
                 var wordClone = wordNode.cloneNode(true);
@@ -35,7 +34,7 @@ $.extend({
 
 
 $.fn.unhighlight = function (options) {
-    var settings = { className: 'librarian', element: 'span' };
+    var settings = { className: 'lib-highlight', element: 'span' };
     $.extend(settings, options);
 
     return this.find(settings.element + "." + settings.className).each(function () {
@@ -47,7 +46,7 @@ $.fn.unhighlight = function (options) {
 
 
 $.fn.highlight = function (words, options) {
-    var settings = { className: 'librarian', element: 'span', caseSensitive: false, wordsOnly: false };
+    var settings = { className: 'lib-highlight', element: 'span', caseSensitive: false, wordsOnly: false };
     $.extend(settings, options);
 
     if (words.constructor === String) {
