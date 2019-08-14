@@ -15,9 +15,9 @@ This project was made simply for fun; the code has not been optimized.
 
 
 ## Highlight Plugin
-The jQuery highlight function in use is adapted from Bartek Szokpka's work, which is adapted in turn from [Johann Burkhard's](https://johannburkard.de/) plugin.
+The jQuery highlight function in use is adapted from [Bartek Szokpka's work](https://bartaz.github.io/sandbox.js/jquery.highlight.html), which is adapted in turn from [Johann Burkhard's](https://johannburkard.de/) plugin.
 
-https://bartaz.github.io/sandbox.js/jquery.highlight.html
+
 
 
 
