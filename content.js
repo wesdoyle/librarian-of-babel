@@ -11,11 +11,12 @@ $.extend({
     highlight: function (node, re, nodeName, className) {
         if (node.nodeType === 3) {
             var match = node.data.match(re);
+            console.log('match', match);
             if (match) {
                 var highlight = document.createElement(nodeName || 'span');
                 highlight.className = className || 'librarian';
-                var wordNode = node.splitText(match.index);
-                wordNode.splitText(match[0].length);
+                var wordNode = node.splitText(match.index + 1);
+                wordNode.splitText(match[0].replace(/\s+/g, '').length);
                 var wordClone = wordNode.cloneNode(true);
                 highlight.appendChild(wordClone);
                 wordNode.parentNode.replaceChild(highlight, wordNode);
@@ -52,19 +53,24 @@ $.fn.highlight = function (words, options) {
     if (words.constructor === String) {
         words = [words];
     }
+
     words = $.grep(words, function(word, i){
         return word != '';
     });
+
     words = $.map(words, function(word, i) {
         return word.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
     });
+
     if (words.length == 0) { return this; };
 
     var flag = settings.caseSensitive ? "" : "i";
     var pattern = "(" + words.join("|") + ")";
+
     if (settings.wordsOnly) {
         pattern = "\\b" + pattern + "\\b";
     }
+
     var re = new RegExp(pattern, flag);
 
     return this.each(function () {
